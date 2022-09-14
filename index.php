@@ -6,8 +6,13 @@ use Spatie\IcalendarGenerator\Components\Event;
 require_once  'vendor/autoload.php';
 require_once 'config.php';
 
+if(false === isset($_GET['name']) || false === defined(strtoupper($_GET['name']))) {
+    echo 'Parameter \'name\' is missing or bad';
+    die();
+}
+
 try {
-    $client = new MyGes\Client('skolae-app', MYGES_USERNAME, MYGES_PASSWORD);
+    $client = new MyGes\Client('skolae-app', constant(strtoupper($_GET['name']))['MYGES_USERNAME'], constant(strtoupper($_GET['name']))['MYGES_PASSWORD']);
 } catch(MyGes\Exceptions\BadCredentialsException $e) {
     die($e->getMessage()); // bad credentials
 }

@@ -9,5 +9,5 @@ composer install
 ### Launch
 
 - Change username & password in ```config.php```
-- In your calendar, subscribe to ```http://{your-url}/agenda-ges/```
+- In your calendar, subscribe to ```http://{your-url}/agenda-ges?name={your_name}```
 
