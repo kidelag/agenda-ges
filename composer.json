@@ -1,0 +1,13 @@
+{
+    "name": "kidelag/agenda-ges",
+    "authors": [
+        {
+            "name": "matthieu",
+            "email": "campagne.matthieu@gmail.com"
+        }
+    ],
+    "require": {
+        "tchenu/myges": "^1.0",
+        "spatie/icalendar-generator": "^2.4"
+    }
+}
